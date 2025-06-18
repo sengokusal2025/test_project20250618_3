@@ -1,0 +1,64 @@
+/* メインスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.upload-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.main-content {
+    display: none;
+    padding: 40px;
+}
+
+.main-content.active {
+    display: block;
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    grid-template-areas: 
+        "image-editor roi-preview roi-controls"
+        "zoom-controls roi-preview roi-info";
+}
