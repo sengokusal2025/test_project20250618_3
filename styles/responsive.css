@@ -1,0 +1,41 @@
+/* レスポンシブスタイル */
+
+@media (max-width: 1400px) {
+    .content-layout {
+        grid-template-columns: 1fr 350px 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "image-editor"
+            "zoom-controls"
+            "roi-preview"
+            "roi-controls"
+            "roi-info";
+    }
+
+    .roi-preview {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .upload-section {
+        padding: 20px;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+
+    .content-layout {
+        gap: 20px;
+    }
+}
